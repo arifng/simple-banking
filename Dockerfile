@@ -1,4 +1,4 @@
-FROM gradle:8.1.1-jdk11
-WORKDIR /
-COPY . /
-ENTRYPOINT ["./gradlew", "test"]
+FROM adoptopenjdk:11.0.11_9-jre-hotspot
+ARG JAR_FILE=build/libs/assignment-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]

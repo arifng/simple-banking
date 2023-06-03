@@ -5,7 +5,6 @@ services:
     image: 'assignment:latest'
     build:
       context: .
-      dockerfile: Dockerfile.test
     container_name: app
     ports:
       - '8080:8080'
