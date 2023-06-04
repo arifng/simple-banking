@@ -13,13 +13,18 @@
 ## Build Project
 `./gradlew bootJar`
 
-It will create war file under build/libs directory.
+It will create jar file under build/libs directory.
 
 ## Run project
 `docker compose up --build`
 
+Up all instances (db with structure, app, rabbit)
+
+## Test coverage
+Class - 96%, Method - 76%, Line - 75%
+
 ## Important choices
-- In this project I focus on design rather implementing method more accurately.
+- In this project I focus more on design rather implementing method only.
 - I tried to touch every aspect of application (but still it's not cover most aspects that we face in production)
 - With docker, it is just two command - one for build & another for run, it will run same environment as in production
 - To write query and generate result map, I have used xml based mapping.
@@ -28,7 +33,7 @@ It will create war file under build/libs directory.
 - For financial amount calculation, I have used BigDecimal.
 - All MyBatis xml mapper called through interface without sql session factory.
 - A util class added for helper methods.
-- RabbitMQ is access through different class and only simple method exposed for message publish.
+- RabbitMQ is access through a simple class and only simple method exposed for message publish.
 
 ## Performance
 - I run 1000 iteration for each query via Postman collections. At first, it fast, but when more data inserted and load more transaction list, it

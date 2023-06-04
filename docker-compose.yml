@@ -27,7 +27,7 @@ services:
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=banking_db
     volumes:
-      - ./src/test/resources/ddl/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
+      - ./src/main/resources/ddl/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
 
   rabbit:
     image: 'rabbitmq:management-alpine'
