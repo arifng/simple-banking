@@ -2,7 +2,7 @@ version: '1'
 
 services:
   app:
-    image: 'assignment:latest'
+    image: 'simple-banking:latest'
     build:
       context: .
     container_name: app
