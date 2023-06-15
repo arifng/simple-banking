@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "bf099866-731e-428c-a7bb-0d3fa053290e",
-		"name": "Tuum assignment load test",
+		"name": "simple banking load test",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "16494845"
 	},
