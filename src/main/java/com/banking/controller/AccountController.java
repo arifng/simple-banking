@@ -38,7 +38,6 @@ public class AccountController {
 
     @GetMapping("/api/account/{accountId}")
     public AccountResponse getAccount(@PathVariable("accountId") long accountId) throws ApiException {
-        System.out.println("requested");
         return accountService.getAccount(accountId);
     }
 }
